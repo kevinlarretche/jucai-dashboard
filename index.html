@@ -1,5 +1,368 @@
-<!DOCTYPE html><html><body style="background:#08080a;color:#f4f4f0;font-family:monospace;padding:2rem;line-height:1.6">
-    <div style="color:#ff5f5f;font-size:1.2rem;font-weight:700;margin-bottom:1rem">⚠ JSON parse failed</div>
-    <div style="color:#71717a;font-size:11px;margin-bottom:1rem">Raw Gemini output (first 3000 chars):</div>
-    <pre style="white-space:pre-wrap;font-size:11px;color:#c8a96e;background:#111115;padding:1rem;border-radius:4px;border:1px solid rgba(255,255,255,0.06)">{"week": "Apr 2 - Apr 9, 2026", "executive_summary": {"key_insight": "Customer confusion around product usage and value proposition (JUC-001, JUC-003) combined with significant post-purchase dissatisfaction (JUC-004) is impacting trust and likely retention. Pricing concerns (JUC-002) are also a recurring theme.", "biggest_risk": "High volume of post-purchase complaints (JUC-004) regarding taste and texture, coupled with questions about product normalcy, indicates a potential quality control issue or severe mismatch between expectation and reality, leading to churn and negative word-of-mouth. Unanswered questions across all products, especially pre-purchase, are also a significant conversion risk.", "biggest_opportunity": "Clarifying product identity, usage, and specific health benefits through improved AI responses and marketing content (JUC-001, JUC-003) can significantly reduce pre-purchase friction and increase conversion. Addressing pricing perceptions (JUC-002) through value articulation or strategic offers could boost sales. Investigating and resolving the quality/taste issues for JUC-004 is critical for retention and brand reputation."}, "products": [{"id": "JUC-001", "name": "JUC-001", "stats": {"scans": 20, "conversations": 72, "pre_purchase": 49, "post_purchase": 23}, "top_categories": ["general (32x)", "usage (14x)", "ingredients (13x)", "storage (4x)", "nutrition (3x)"], "pain_points": {"count": 32, "top_issue": "Confusion regarding product identity and usage (e.g., 'eat or drink??', 'how to use this thing')", "examples": ["ok but like juice?", "how to use this thing", "eat or drink??", "how eat this", "need mix or just eat"], "impact": "High pre-purchase confusion likely leads to abandoned purchases and low conversion rates, as customers don't understand the product's basic function or value."}, "unanswered": {"count": 36, "examples": ["ok but like juice?", "eat or drink??", "which fruit??", "ok but more detail pls", "is drink or food"], "risk_level": "high", "business_impact": "A high volume of unanswered basic questions about product identity and usage directly hinders pre-purchase conversion and creates a poor first impression, eroding trust."}, "customer_sentiment": {"positive": 0, "neutral": 40, "negative": 32, "summary": "Sentiment is largely neutral to negative, driven by confusion about what the product is and how to use it. Phrases like 'taste kinda weird tho' indicate initial dissatisfaction."}, "ai_performance": {"resolution_rate": "50%", "improvement_opportunities": "Improve AI's ability to clearly explain product identity, intended use cases, and basic preparation instructions. Create specific FAQs for 'eat or drink' and 'how to use'."}, "marketing_signals": {"what_customers_love": ["insufficient data"], "objections": ["ok but like juice?", "eat or drink??", "taste kinda weird tho", "confused tbh"], "content_opportunities": ["FAQ: \"Is JUC-001 a drink or a food?\"", "Ad copy: \"JUC-001: Your versatile [snack/drink] solut</pre>
-  </body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<title>SQU Intelligence — APR 2 - APR 9, 2026</title>
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  body{background:#08080a;color:#f4f4f0;font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.5}
+  .wrap{max-width:1400px;margin:0 auto;padding:0 2rem}
+  .header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+  .logo{font-size:1.5rem;font-weight:700}
+  .logo span{color:#c8a96e}
+  .grid{display:grid;grid-template-columns:220px 1fr 260px;gap:2rem;padding:2rem 0}
+  .col-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#71717a;display:block;margin-bottom:1rem}
+  .card{background:#111115;border:1px solid rgba(255,255,255,0.06);padding:1.25rem;border-radius:4px;margin-bottom:1rem}
+  .stat-big{font-size:2.2rem;font-weight:700;line-height:1;margin:0.4rem 0}
+  .badge{font-size:9px;font-weight:700;padding:3px 8px;border-radius:2px;display:inline-block}
+  .exec-quote{font-size:1rem;font-weight:300;line-height:1.6;color:#e4e4e7;border-left:3px solid #c8a96e;padding-left:1.25rem;margin-bottom:2rem}
+  .action-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+  .footer{padding:1rem 0;border-top:1px solid rgba(255,255,255,0.06);font-size:9px;color:#71717a;display:flex;justify-content:space-between;margin-top:0.5rem}
+  @media(max-width:960px){.grid{grid-template-columns:1fr}.action-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="header">
+    <div class="logo">SQU <span>Intelligence</span></div>
+    <div style="text-align:right">
+      <div style="font-size:11px;font-weight:600;color:#71717a">APR 2 - APR 9, 2026</div>
+      <div style="font-size:10px;color:#00d084;letter-spacing:1px;margin-top:2px">● SYSTEM LIVE</div>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <section>
+      <span class="col-label">System Pulse</span>
+      <div class="card">
+        <span class="col-label" style="margin-bottom:0">Friction Index</span>
+        <div class="stat-big" style="color:#ff5f5f">1.00</div>
+        <div class="badge" style="background:#ff5f5f22;color:#ff5f5f">HIGH FRICTION</div>
+      </div>
+      <div class="card">
+        <span class="col-label" style="margin-bottom:0">Weekly Scans</span>
+        <div class="stat-big">61</div>
+        <span style="font-size:10px;color:#71717a">262 conversations</span>
+      </div>
+      <div class="card" style="border-top:2px solid #ff5f5f">
+        <span class="col-label">Critical Focus</span>
+        <div style="font-weight:600;font-size:1rem;text-transform:uppercase">JUC-004</div>
+        <p style="font-size:11px;color:#71717a;margin-top:4px">61 pain points this week</p>
+      </div>
+      <div class="card">
+        <span class="col-label">Opportunity</span>
+        <p style="font-size:11px;color:#a1a1aa;line-height:1.6">Improve product clarity and AI resolution. Resolving JUC-004 quality issues is a big win.</p>
+      </div>
+    </section>
+
+    <section>
+      <span class="col-label">Executive Briefing</span>
+      <div class="exec-quote">Customers are confused about product identity, value, and nutritional claims. A major quality issue impacts one product.</div>
+      <span class="col-label">Prioritized Action Feed</span>
+      <div class="action-grid"><div style="background:#1a1a20;padding:1rem;border-radius:2px;border-left:2px solid #c8a96e">
+      <div style="font-weight:600;font-size:12px;margin-bottom:4px;color:#f4f4f0">Update JUC-001 product descriptions and AI knowledge base.</div>
+      <div style="font-size:11px;color:#71717a;line-height:1.4;margin-bottom:6px">Address fundamental product confusion and improve AI resolution.</div>
+      <span style="font-size:9px;font-weight:700;text-transform:uppercase;color:#ff5f5f">high impact</span>
+      <span style="font-size:9px;color:#333;margin:0 4px">·</span>
+      <span style="font-size:9px;text-transform:uppercase;color:#71717a">content</span>
+    </div><div style="background:#1a1a20;padding:1rem;border-radius:2px;border-left:2px solid #c8a96e">
+      <div style="font-weight:600;font-size:12px;margin-bottom:4px;color:#f4f4f0">Review JUC-004 taste/texture issues and quality control.</div>
+      <div style="font-size:11px;color:#71717a;line-height:1.4;margin-bottom:6px">Mitigate severe brand damage, reduce churn, and ensure safety.</div>
+      <span style="font-size:9px;font-weight:700;text-transform:uppercase;color:#ff5f5f">high impact</span>
+      <span style="font-size:9px;color:#333;margin:0 4px">·</span>
+      <span style="font-size:9px;text-transform:uppercase;color:#71717a">product</span>
+    </div><div style="background:#1a1a20;padding:1rem;border-radius:2px;border-left:2px solid #c8a96e">
+      <div style="font-weight:600;font-size:12px;margin-bottom:4px;color:#f4f4f0">Enhance JUC-003 nutritional clarity and AI responses.</div>
+      <div style="font-size:11px;color:#71717a;line-height:1.4;margin-bottom:6px">Build customer trust and support health claims with specific data.</div>
+      <span style="font-size:9px;font-weight:700;text-transform:uppercase;color:#ff5f5f">high impact</span>
+      <span style="font-size:9px;color:#333;margin:0 4px">·</span>
+      <span style="font-size:9px;text-transform:uppercase;color:#71717a">content</span>
+    </div><div style="background:#1a1a20;padding:1rem;border-radius:2px;border-left:2px solid #c8a96e">
+      <div style="font-weight:600;font-size:12px;margin-bottom:4px;color:#f4f4f0">Develop JUC-002 value proposition and pricing strategy.</div>
+      <div style="font-size:11px;color:#71717a;line-height:1.4;margin-bottom:6px">Address price sensitivity, boost sales, and improve perceived value.</div>
+      <span style="font-size:9px;font-weight:700;text-transform:uppercase;color:#c8a96e">medium impact</span>
+      <span style="font-size:9px;color:#333;margin:0 4px">·</span>
+      <span style="font-size:9px;text-transform:uppercase;color:#71717a">marketing</span>
+    </div></div>
+    </section>
+
+    <section>
+      <span class="col-label">Segment Intelligence</span>
+      <div class="card"><div style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
+      <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px">
+        <span>JUC-001</span>
+        <span style="color:#71717a">68% pre-purchase</span>
+      </div>
+      <div style="height:2px;background:#27272a;border-radius:2px">
+        <div style="height:100%;width:68%;background:#c8a96e;border-radius:2px"></div>
+      </div>
+    </div><div style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
+      <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px">
+        <span>JUC-002</span>
+        <span style="color:#71717a">38% pre-purchase</span>
+      </div>
+      <div style="height:2px;background:#27272a;border-radius:2px">
+        <div style="height:100%;width:38%;background:#c8a96e;border-radius:2px"></div>
+      </div>
+    </div><div style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
+      <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px">
+        <span>JUC-003</span>
+        <span style="color:#71717a">60% pre-purchase</span>
+      </div>
+      <div style="height:2px;background:#27272a;border-radius:2px">
+        <div style="height:100%;width:60%;background:#c8a96e;border-radius:2px"></div>
+      </div>
+    </div><div style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
+      <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px">
+        <span>JUC-004</span>
+        <span style="color:#71717a">20% pre-purchase</span>
+      </div>
+      <div style="height:2px;background:#27272a;border-radius:2px">
+        <div style="height:100%;width:20%;background:#c8a96e;border-radius:2px"></div>
+      </div>
+    </div></div>
+      <span class="col-label">Risk Exposure</span>
+      <div style="padding:1rem;border-left:2px solid #ff5f5f;background:rgba(255,95,95,0.03);border-radius:0 2px 2px 0">
+        <p style="font-size:12px;line-height:1.6;font-style:italic;color:#fda4af">"High unanswered rates indicate AI failure. JUC-004's taste complaints are a severe brand risk."</p>
+      </div>
+    </section>
+
+  </div>
+
+  <div style="padding-bottom:2rem">
+    <span class="col-label">Product Breakdown</span>
+    <div style="background:#111115;border:1px solid rgba(255,255,255,0.06);padding:1.25rem;border-radius:4px;margin-bottom:0.75rem">
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem">
+        <div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:5px">JUC-001</div>
+          <div style="display:flex;gap:1.25rem;font-size:11px;color:#71717a;flex-wrap:wrap">
+            <span>Scans <strong style="color:#f4f4f0">20</strong></span>
+            <span>Conversations <strong style="color:#f4f4f0">72</strong></span>
+            <span>Pre-purchase <strong style="color:#f4f4f0">49</strong></span>
+            <span>Post-purchase <strong style="color:#f4f4f0">23</strong></span>
+            <span>AI resolved <strong style="color:#c8a96e">50%</strong></span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:10px;color:#71717a;margin-bottom:2px">general</div><div style="font-size:10px;color:#71717a;margin-bottom:2px">usage</div>
+        </div>
+      </div>
+
+      <div style="margin-top:10px">
+    <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">
+      <div style="width:3%;background:#00d084"></div>
+      <div style="width:56%;background:#444"></div>
+      <div style="width:41%;background:#ff5f5f"></div>
+    </div>
+    <div style="display:flex;gap:1rem;margin-top:5px;font-size:10px">
+      <span style="color:#00d084">▲ 3% positive</span>
+      <span style="color:#71717a">● 56% neutral</span>
+      <span style="color:#ff5f5f">▼ 41% negative</span>
+    </div>
+  </div>
+
+      
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.05)">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap">
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:rgba(255,95,95,0.15);color:#ff5f5f;text-transform:uppercase">32 pain points</span>
+          <span style="font-size:11px;color:#a1a1aa">Lack of clarity on product type and usage.</span>
+        </div>
+        <div><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">ok but like juice?</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">how to use this thing</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">eat or drink??</span></div>
+      </div>
+
+      
+      <div style="margin-top:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap">
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:rgba(200,169,110,0.12);color:#c8a96e;text-transform:uppercase">36 unanswered</span>
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:#ff5f5f18;color:#ff5f5f;text-transform:uppercase">high risk</span>
+          <span style="font-size:11px;color:#71717a">Significant pre-purchase friction, low conversion.</span>
+        </div>
+        <div><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">ok but like juice?</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">eat or drink??</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">which fruit??</span></div>
+      </div>
+
+      
+      <div style="margin-top:10px;font-size:11px;color:#71717a;line-height:1.6;padding-top:10px;border-top:1px solid rgba(255,255,255,0.05)">
+        Customers are highly confused about JUC-001's identity and how to use it.
+      </div>
+
+    </div><div style="background:#111115;border:1px solid rgba(255,255,255,0.06);padding:1.25rem;border-radius:4px;margin-bottom:0.75rem">
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem">
+        <div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:5px">JUC-002</div>
+          <div style="display:flex;gap:1.25rem;font-size:11px;color:#71717a;flex-wrap:wrap">
+            <span>Scans <strong style="color:#f4f4f0">8</strong></span>
+            <span>Conversations <strong style="color:#f4f4f0">29</strong></span>
+            <span>Pre-purchase <strong style="color:#f4f4f0">11</strong></span>
+            <span>Post-purchase <strong style="color:#f4f4f0">18</strong></span>
+            <span>AI resolved <strong style="color:#c8a96e">41%</strong></span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:10px;color:#71717a;margin-bottom:2px">pricing</div><div style="font-size:10px;color:#71717a;margin-bottom:2px">general</div>
+        </div>
+      </div>
+
+      <div style="margin-top:10px">
+    <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">
+      <div style="width:14%;background:#00d084"></div>
+      <div style="width:52%;background:#444"></div>
+      <div style="width:34%;background:#ff5f5f"></div>
+    </div>
+    <div style="display:flex;gap:1rem;margin-top:5px;font-size:10px">
+      <span style="color:#00d084">▲ 14% positive</span>
+      <span style="color:#71717a">● 52% neutral</span>
+      <span style="color:#ff5f5f">▼ 34% negative</span>
+    </div>
+  </div>
+
+      
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.05)">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap">
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:rgba(255,95,95,0.15);color:#ff5f5f;text-transform:uppercase">12 pain points</span>
+          <span style="font-size:11px;color:#a1a1aa">Perceived high price and value concerns.</span>
+        </div>
+        <div><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">worth it?</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">size options</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">price feels a bit high</span></div>
+      </div>
+
+      
+      <div style="margin-top:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap">
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:rgba(200,169,110,0.12);color:#c8a96e;text-transform:uppercase">17 unanswered</span>
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:#c8a96e18;color:#c8a96e;text-transform:uppercase">medium risk</span>
+          <span style="font-size:11px;color:#71717a">Lost sales due to price concerns and purchase friction.</span>
+        </div>
+        <div><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">price?</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">where buy</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">worth it?</span></div>
+      </div>
+
+      
+      <div style="margin-top:10px;font-size:11px;color:#71717a;line-height:1.6;padding-top:10px;border-top:1px solid rgba(255,255,255,0.05)">
+        Pricing and value perception are key concerns for JUC-002 customers.
+      </div>
+
+    </div><div style="background:#111115;border:1px solid rgba(255,255,255,0.06);padding:1.25rem;border-radius:4px;margin-bottom:0.75rem">
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem">
+        <div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:5px">JUC-003</div>
+          <div style="display:flex;gap:1.25rem;font-size:11px;color:#71717a;flex-wrap:wrap">
+            <span>Scans <strong style="color:#f4f4f0">16</strong></span>
+            <span>Conversations <strong style="color:#f4f4f0">75</strong></span>
+            <span>Pre-purchase <strong style="color:#f4f4f0">45</strong></span>
+            <span>Post-purchase <strong style="color:#f4f4f0">30</strong></span>
+            <span>AI resolved <strong style="color:#c8a96e">31%</strong></span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:10px;color:#71717a;margin-bottom:2px">nutrition</div><div style="font-size:10px;color:#71717a;margin-bottom:2px">health</div>
+        </div>
+      </div>
+
+      <div style="margin-top:10px">
+    <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">
+      <div style="width:7%;background:#00d084"></div>
+      <div style="width:47%;background:#444"></div>
+      <div style="width:46%;background:#ff5f5f"></div>
+    </div>
+    <div style="display:flex;gap:1rem;margin-top:5px;font-size:10px">
+      <span style="color:#00d084">▲ 7% positive</span>
+      <span style="color:#71717a">● 47% neutral</span>
+      <span style="color:#ff5f5f">▼ 46% negative</span>
+    </div>
+  </div>
+
+      
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.05)">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap">
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:rgba(255,95,95,0.15);color:#ff5f5f;text-transform:uppercase">39 pain points</span>
+          <span style="font-size:11px;color:#a1a1aa">Vague nutritional claims and lack of specific details.</span>
+        </div>
+        <div><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">how much exactly?</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">hmm sounds vague</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">per serving or what</span></div>
+      </div>
+
+      
+      <div style="margin-top:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap">
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:rgba(200,169,110,0.12);color:#c8a96e;text-transform:uppercase">52 unanswered</span>
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:#ff5f5f18;color:#ff5f5f;text-transform:uppercase">high risk</span>
+          <span style="font-size:11px;color:#71717a">Erodes trust, prevents informed purchase decisions.</span>
+        </div>
+        <div><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">how much exactly?</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">is it healthy tho</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">hmm sounds vague</span></div>
+      </div>
+
+      
+      <div style="margin-top:10px;font-size:11px;color:#71717a;line-height:1.6;padding-top:10px;border-top:1px solid rgba(255,255,255,0.05)">
+        JUC-003 customers demand specific nutritional details and clear health benefits.
+      </div>
+
+    </div><div style="background:#111115;border:1px solid #ff5f5f;padding:1.25rem;border-radius:4px;margin-bottom:0.75rem">
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem">
+        <div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:5px">JUC-004</div>
+          <div style="display:flex;gap:1.25rem;font-size:11px;color:#71717a;flex-wrap:wrap">
+            <span>Scans <strong style="color:#f4f4f0">17</strong></span>
+            <span>Conversations <strong style="color:#f4f4f0">86</strong></span>
+            <span>Pre-purchase <strong style="color:#f4f4f0">17</strong></span>
+            <span>Post-purchase <strong style="color:#f4f4f0">69</strong></span>
+            <span>AI resolved <strong style="color:#c8a96e">85%</strong></span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:10px;color:#71717a;margin-bottom:2px">complaint</div><div style="font-size:10px;color:#71717a;margin-bottom:2px">general</div>
+        </div>
+      </div>
+
+      <div style="margin-top:10px">
+    <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">
+      <div style="width:7%;background:#00d084"></div>
+      <div style="width:23%;background:#444"></div>
+      <div style="width:70%;background:#ff5f5f"></div>
+    </div>
+    <div style="display:flex;gap:1rem;margin-top:5px;font-size:10px">
+      <span style="color:#00d084">▲ 7% positive</span>
+      <span style="color:#71717a">● 23% neutral</span>
+      <span style="color:#ff5f5f">▼ 70% negative</span>
+    </div>
+  </div>
+
+      
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.05)">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap">
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:rgba(255,95,95,0.15);color:#ff5f5f;text-transform:uppercase">61 pain points</span>
+          <span style="font-size:11px;color:#a1a1aa">Unpleasant taste and texture of the product.</span>
+        </div>
+        <div><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">this tastes bad</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">i dont like texture</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(255,95,95,0.1);color:#ff9a9a;border-radius:2px">its weird man</span></div>
+      </div>
+
+      
+      <div style="margin-top:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap">
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:rgba(200,169,110,0.12);color:#c8a96e;text-transform:uppercase">13 unanswered</span>
+          <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;background:#ff5f5f18;color:#ff5f5f;text-transform:uppercase">high risk</span>
+          <span style="font-size:11px;color:#71717a">Brand damage, customer churn, potential safety investigations.</span>
+        </div>
+        <div><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">like rlly bad idk why</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">maybe bad batch?</span><span style="display:inline-block;margin:2px 3px 2px 0;font-size:10px;padding:2px 8px;background:rgba(200,169,110,0.1);color:#c8a96e;border-radius:2px">not normal right</span></div>
+      </div>
+
+      
+      <div style="margin-top:10px;font-size:11px;color:#71717a;line-height:1.6;padding-top:10px;border-top:1px solid rgba(255,255,255,0.05)">
+        JUC-004 faces severe customer complaints regarding its taste and texture.
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>SQU-AI Intelligence v4.2</span>
+    <span>INTERNAL USE ONLY · SECURE DEPLOYMENT</span>
+  </footer>
+
+</div>
+</body>
+</html>
