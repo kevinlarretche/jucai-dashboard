@@ -1,5 +1,211 @@
-<div style="background:#111;color:#fca5a5;padding:40px;text-align:center;font-family:sans-serif;border-radius:20px;border:1px solid #ef4444;">
-        <h2 style="margin:0">Intelligence Data Unavailable</h2>
-        <p style="color:#9ca3af">The AI model did not return a valid report. This usually happens if the input was too large or the response was blocked by safety filters.</p>
-        <code style="background:#000;padding:10px;display:block;margin-top:20px;color:#666;font-size:11px;">Error Source: candidates.finishReason: undefined</code>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background: #050505; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(15, 17, 21, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-7xl mx-auto space-y-6">
+        <header class="glass rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-black text-white">JUCAI <span class="text-blue-400">Intelligence</span></h1>
+                <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Apr 2 - Apr 9, 2026</p>
+            </div>
+            <div class="text-right text-xs text-slate-400">Thursday, April 9, 2026</div>
+        </header>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="glass p-4 rounded-xl"><div class="text-xs text-slate-500 font-bold uppercase">Scans</div><div class="text-2xl font-black">61</div></div>
+            <div class="glass p-4 rounded-xl"><div class="text-xs text-slate-500 font-bold uppercase">Convs</div><div class="text-2xl font-black">262</div></div>
+            <div class="glass p-4 rounded-xl"><div class="text-xs text-slate-500 font-bold uppercase">Pain Points</div><div class="text-2xl font-black text-red-400">144</div></div>
+            <div class="glass p-4 rounded-xl"><div class="text-xs text-slate-500 font-bold uppercase">Questions</div><div class="text-2xl font-black text-amber-400">118</div></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 space-y-6">
+                <div class="glass rounded-2xl p-6">
+                    <h2 class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">Executive Summary</h2>
+                    <div class="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4 mb-4 text-sm leading-relaxed">Fundamental product identity and quality issues are severely impacting customer experience and conversion, particularly for JUC-001 (usage confusion) and JUC-004 (taste/texture complaints).</div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="bg-red-500/10 p-3 rounded-lg border border-red-500/20"><b class="text-red-400 uppercase block mb-1">Risk</b>Widespread negative product quality feedback for JUC-004 (61 pain points, 62x complaints) and high pre-purchase confusion for JUC-001 (36 unanswered questions, 49 pre-purchase conversations) are leading to significant churn risk, brand damage, and lost sales. High unanswered rates across all products indicate AI performance gaps.</div>
+                        <div class="bg-emerald-500/10 p-3 rounded-lg border border-emerald-500/20"><b class="text-emerald-400 uppercase block mb-1">Opportunity</b>Clarifying product positioning and usage for JUC-001, rigorously investigating and addressing JUC-004's quality issues, and providing precise nutritional details for JUC-003 can significantly improve customer trust, reduce pre-purchase friction, and enhance retention. Improving AI resolution for these core issues is critical.</div>
+                    </div>
+                </div>
+                <div class="glass rounded-2xl p-6 h-64">
+                    <canvas id="sentimentChart"></canvas>
+                </div>
+            </div>
+            <div class="glass rounded-2xl p-6">
+                <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Action Plan</h2>
+                
+    <div style="background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.05); border-radius:12px; padding:16px; margin-bottom:12px;">
+        <div style="display:flex; gap:12px;">
+            <div style="flex-shrink:0; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:bold;" class="bg-red-500/20 text-red-400 border-red-500/30">1</div>
+            <div>
+                <h4 style="margin:0 0 4px 0; font-size:14px; font-weight:bold; color:#fff;">Launch an immediate, high-priority investigation into JUC-004's taste, texture, and 'bad batch' complaints, including QA review and potential product recall assessment.</h4>
+                <p style="margin:0; font-size:12px; color:#94a3b8;">61 pain points and 62 complaints indicate a critical product quality issue severely impacting customer trust, retention, and brand reputation. This is the most urgent risk.</p>
+            </div>
+        </div>
     </div>
+    <div style="background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.05); border-radius:12px; padding:16px; margin-bottom:12px;">
+        <div style="display:flex; gap:12px;">
+            <div style="flex-shrink:0; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:bold;" class="bg-blue-500/20 text-blue-400 border-blue-500/30">2</div>
+            <div>
+                <h4 style="margin:0 0 4px 0; font-size:14px; font-weight:bold; color:#fff;">Develop and deploy clear, concise product positioning and usage guides for JUC-001, integrating them into AI responses and marketing materials.</h4>
+                <p style="margin:0; font-size:12px; color:#94a3b8;">High pre-purchase confusion (49 pre-purchase conversations, 36 unanswered) for JUC-001 is a significant barrier to conversion. Clarifying product identity will reduce friction and improve sales.</p>
+            </div>
+        </div>
+    </div>
+    <div style="background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.05); border-radius:12px; padding:16px; margin-bottom:12px;">
+        <div style="display:flex; gap:12px;">
+            <div style="flex-shrink:0; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:bold;" class="bg-blue-500/20 text-blue-400 border-blue-500/30">3</div>
+            <div>
+                <h4 style="margin:0 0 4px 0; font-size:14px; font-weight:bold; color:#fff;">Publish comprehensive and precise nutritional information (e.g., exact grams of sugar, calories per serving) for JUC-003, and update AI knowledge base accordingly.</h4>
+                <p style="margin:0; font-size:12px; color:#94a3b8;">Customers for JUC-003 are highly skeptical due to vague health claims and lack of specific data (39 pain points, 52 unanswered). Transparency will build trust and aid conversion for health-conscious buyers.</p>
+            </div>
+        </div>
+    </div>
+    <div style="background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.05); border-radius:12px; padding:16px; margin-bottom:12px;">
+        <div style="display:flex; gap:12px;">
+            <div style="flex-shrink:0; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:bold;" class="bg-blue-500/20 text-blue-400 border-blue-500/30">4</div>
+            <div>
+                <h4 style="margin:0 0 4px 0; font-size:14px; font-weight:bold; color:#fff;">Enhance AI's ability to handle fundamental product questions (JUC-001), detailed nutritional queries (JUC-003), and pricing/value propositions (JUC-002).</h4>
+                <p style="margin:0; font-size:12px; color:#94a3b8;">Consistently high unanswered rates across JUC-001 (50%), JUC-002 (41.4%), and JUC-003 (30.7%) indicate AI is failing to address core customer needs, leading to frustration and lost opportunities.</p>
+            </div>
+        </div>
+    </div>
+    <div style="background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.05); border-radius:12px; padding:16px; margin-bottom:12px;">
+        <div style="display:flex; gap:12px;">
+            <div style="flex-shrink:0; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:bold;" class="bg-blue-500/20 text-blue-400 border-blue-500/30">5</div>
+            <div>
+                <h4 style="margin:0 0 4px 0; font-size:14px; font-weight:bold; color:#fff;">Review JUC-002's pricing strategy and develop marketing content that clearly communicates its value proposition or explores bundle/discount options.</h4>
+                <p style="margin:0; font-size:12px; color:#94a3b8;">Pricing is a significant objection for JUC-002 (16x pricing category, 12 pain points), impacting repeat purchases. Addressing this can improve retention and customer lifetime value.</p>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+    <div style="background:rgba(15,17,21,0.7); border:1px solid rgba(255,255,255,0.08); border-top:3px solid #3b82f6; border-radius:12px; overflow:hidden; display:flex; flex-direction:column; min-height:220px;">
+        <div style="padding:16px; border-bottom:1px solid rgba(255,255,255,0.05);">
+            <div style="display:flex; justify-content:space-between;">
+                <div>
+                    <h3 style="margin:0; font-size:16px; font-weight:800; color:#fff;">JUC-001</h3>
+                    <div style="font-size:10px; color:#64748b; text-transform:uppercase;">ID: JUC-001</div>
+                </div>
+                <div style="text-align:right;">
+                    <div style="font-size:18px; font-weight:bold; color:#3b82f6;">72</div>
+                    <div style="font-size:9px; color:#64748b; text-transform:uppercase;">CONVS</div>
+                </div>
+            </div>
+            <div style="height:6px; background:#1e293b; border-radius:10px; margin-top:12px; display:flex; overflow:hidden;">
+                <div style="width:68%; background:#3b82f6;"></div>
+            </div>
+        </div>
+        <div style="padding:16px; flex:1; font-size:12px; color:#94a3b8;">
+            <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:10px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-weight:bold; color:#fff; font-size:11px; margin-bottom:4px; display:flex; align-items:center; gap:4px;">💡 Insight</div>
+                JUC-001 faces a critical challenge with fundamental product understanding, leading to high pre-purchase friction and a 50% AI unanswered rate. Addressing the core 'what is it?' and 'how to use it?' questions is paramount for improving conversion and customer satisfaction.
+            </div>
+        </div>
+    </div>
+    <div style="background:rgba(15,17,21,0.7); border:1px solid rgba(255,255,255,0.08); border-top:3px solid #10b981; border-radius:12px; overflow:hidden; display:flex; flex-direction:column; min-height:220px;">
+        <div style="padding:16px; border-bottom:1px solid rgba(255,255,255,0.05);">
+            <div style="display:flex; justify-content:space-between;">
+                <div>
+                    <h3 style="margin:0; font-size:16px; font-weight:800; color:#fff;">JUC-002</h3>
+                    <div style="font-size:10px; color:#64748b; text-transform:uppercase;">ID: JUC-002</div>
+                </div>
+                <div style="text-align:right;">
+                    <div style="font-size:18px; font-weight:bold; color:#10b981;">29</div>
+                    <div style="font-size:9px; color:#64748b; text-transform:uppercase;">CONVS</div>
+                </div>
+            </div>
+            <div style="height:6px; background:#1e293b; border-radius:10px; margin-top:12px; display:flex; overflow:hidden;">
+                <div style="width:38%; background:#10b981;"></div>
+            </div>
+        </div>
+        <div style="padding:16px; flex:1; font-size:12px; color:#94a3b8;">
+            <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:10px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-weight:bold; color:#fff; font-size:11px; margin-bottom:4px; display:flex; align-items:center; gap:4px;">💡 Insight</div>
+                JUC-002's primary barrier is pricing, with customers frequently questioning its value and expressing reluctance to repurchase at current prices. Marketing efforts should focus on justifying the price point and exploring promotional strategies to drive repeat purchases.
+            </div>
+        </div>
+    </div>
+    <div style="background:rgba(15,17,21,0.7); border:1px solid rgba(255,255,255,0.08); border-top:3px solid #ec4899; border-radius:12px; overflow:hidden; display:flex; flex-direction:column; min-height:220px;">
+        <div style="padding:16px; border-bottom:1px solid rgba(255,255,255,0.05);">
+            <div style="display:flex; justify-content:space-between;">
+                <div>
+                    <h3 style="margin:0; font-size:16px; font-weight:800; color:#fff;">JUC-003</h3>
+                    <div style="font-size:10px; color:#64748b; text-transform:uppercase;">ID: JUC-003</div>
+                </div>
+                <div style="text-align:right;">
+                    <div style="font-size:18px; font-weight:bold; color:#ec4899;">75</div>
+                    <div style="font-size:9px; color:#64748b; text-transform:uppercase;">CONVS</div>
+                </div>
+            </div>
+            <div style="height:6px; background:#1e293b; border-radius:10px; margin-top:12px; display:flex; overflow:hidden;">
+                <div style="width:60%; background:#ec4899;"></div>
+            </div>
+        </div>
+        <div style="padding:16px; flex:1; font-size:12px; color:#94a3b8;">
+            <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:10px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-weight:bold; color:#fff; font-size:11px; margin-bottom:4px; display:flex; align-items:center; gap:4px;">💡 Insight</div>
+                JUC-003 is severely hampered by a lack of specific nutritional information and vague health claims, resulting in a very low AI resolution rate (30.7%) and high customer skepticism. Providing transparent, quantifiable data is essential to build trust and drive sales.
+            </div>
+        </div>
+    </div>
+    <div style="background:rgba(15,17,21,0.7); border:1px solid rgba(255,255,255,0.08); border-top:3px solid #f43f5e; border-radius:12px; overflow:hidden; display:flex; flex-direction:column; min-height:220px;">
+        <div style="padding:16px; border-bottom:1px solid rgba(255,255,255,0.05);">
+            <div style="display:flex; justify-content:space-between;">
+                <div>
+                    <h3 style="margin:0; font-size:16px; font-weight:800; color:#fff;">JUC-004</h3>
+                    <div style="font-size:10px; color:#64748b; text-transform:uppercase;">ID: JUC-004</div>
+                </div>
+                <div style="text-align:right;">
+                    <div style="font-size:18px; font-weight:bold; color:#f43f5e;">86</div>
+                    <div style="font-size:9px; color:#64748b; text-transform:uppercase;">CONVS</div>
+                </div>
+            </div>
+            <div style="height:6px; background:#1e293b; border-radius:10px; margin-top:12px; display:flex; overflow:hidden;">
+                <div style="width:20%; background:#f43f5e;"></div>
+            </div>
+        </div>
+        <div style="padding:16px; flex:1; font-size:12px; color:#94a3b8;">
+            <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:10px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-weight:bold; color:#fff; font-size:11px; margin-bottom:4px; display:flex; align-items:center; gap:4px;">💡 Insight</div>
+                JUC-004 is facing a severe product quality crisis, with 61 pain points and 62 complaints centered on taste and texture. Immediate investigation into potential manufacturing or ingredient issues is critical to prevent further brand damage and customer churn.
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('sentimentChart');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["JUC-001","JUC-002","JUC-003","JUC-004"],
+                datasets: [
+                    { label: 'Positive', data: [0,10,5,0], backgroundColor: '#10b981' },
+                    { label: 'Neutral', data: [40,40,35,5], backgroundColor: '#64748b' },
+                    { label: 'Negative', data: [60,50,60,95], backgroundColor: '#ef4444' }
+                ]
+            },
+            options: { 
+                responsive: true, maintainAspectRatio: false, 
+                scales: { x: { stacked: true }, y: { stacked: true, display: false } },
+                plugins: { legend: { display: false } }
+            }
+        });
+    </script>
+</body>
+</html>
