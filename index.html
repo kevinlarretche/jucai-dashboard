@@ -12,38 +12,59 @@
         * { margin:0; padding:0; box-sizing:border-box; }
         body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; line-height: 1.4; padding: 1.5rem; }
         .widescreen-container { max-width: 1600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+        
+        /* Upgraded Top Strip */
         .header-row { display: flex; justify-content: space-between; align-items: stretch; gap: 2rem; background: var(--card-bg); padding: 1.5rem 2rem; border-radius: 12px; border: 1px solid var(--border); }
+        .brand-title { display: flex; flex-direction: column; justify-content: center; }
         .brand-title h1 { font-family: 'Montserrat'; font-size: 1.5rem; font-weight: 900; color: var(--jucai-purple); text-transform: uppercase; }
         .brand-title p { font-size: 13px; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 2px; }
-        .top-metrics { display: flex; gap: 3rem; align-items: center; }
-        .metric-item { text-align: right; }
-        .metric-label { font-size: 10px; font-weight: 800; color: var(--text-light); text-transform: uppercase; }
+        
+        .top-metrics { display: flex; gap: 1rem; align-items: center; flex-grow: 1; justify-content: flex-end; }
+        .metric-item { background: var(--bg); padding: 1rem 1.5rem; border-radius: 8px; text-align: right; min-width: 140px; }
+        .metric-label { font-size: 10px; font-weight: 800; color: var(--text-light); text-transform: uppercase; margin-bottom: 4px; }
         .metric-value { font-size: 2rem; font-weight: 900; color: var(--text); line-height: 1; }
         .metric-value.danger { color: var(--jucai-alert); }
+        .metric-trend { font-size: 12px; font-weight: 700; margin-left: 6px; }
+        .trend-up { color: var(--jucai-alert); }
+        .trend-down { color: var(--jucai-green); }
+
         .dashboard-grid { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 1.5rem; align-items: start; }
         .section-title { font-family: 'Montserrat'; font-size: 1rem; font-weight: 800; margin-bottom: 1rem; text-transform: uppercase; color: var(--jucai-purple); }
         .card { background: var(--card-bg); padding: 1.25rem; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 1.5rem; }
+        
         .fire-block { background: #FFF5F5; border: 1px solid #FFE0E0; border-radius: 12px; padding: 1.25rem; }
         .fire-item { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #FFE0E0; }
-        .fire-item-title { font-size: 14px; font-weight: 800; color: var(--jucai-alert); }
+        .fire-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .fire-item-title { font-size: 14px; font-weight: 800; color: var(--jucai-alert); margin-bottom: 4px; }
         .fire-bullet { font-size: 12px; color: #4A4A4A; display: flex; gap: 6px; margin-top: 2px; }
+        
         .ua-card { background: #FFF9E6; border: 1px solid #FFE58F; }
         .ua-list { list-style: none; }
-        .ua-list li { font-size: 12px; font-weight: 500; margin-bottom: 6px; padding-left: 12px; position: relative; }
+        .ua-list li { font-size: 12px; font-weight: 500; margin-bottom: 8px; padding-left: 12px; position: relative; }
         .ua-list li::before { content: '-'; position: absolute; left: 0; color: var(--jucai-warn); font-weight: 800; }
+        
         .data-table { width: 100%; border-collapse: collapse; }
         .data-table th { text-align: left; font-size: 10px; font-weight: 800; color: var(--text-light); border-bottom: 2px solid var(--border); padding-bottom: 8px; }
         .data-table td { padding: 10px 0; font-size: 13px; border-bottom: 1px solid var(--border); }
-        .quotes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-        .quote-card { background: #F9F9FB; padding: 1rem; border-radius: 8px; border-left: 3px solid var(--jucai-purple); font-size: 12px; font-style: italic; }
+        
+        .quotes-grid { display: flex; flex-direction: column; gap: 0.75rem; }
+        .quote-card { padding: 1rem; border-radius: 8px; font-size: 12px; font-style: italic; }
+        .pain-quote { background: #FFF5F5; border-left: 3px solid var(--jucai-alert); color: #5a1a1a; }
+        .conf-quote { background: #F9F9FB; border-left: 3px solid var(--jucai-purple); color: #2a2a3a; }
+        
         .action-card { background: #F0FAF5; padding: 1.25rem; border-radius: 8px; border-left: 4px solid var(--jucai-green); margin-bottom: 0.75rem; }
-        .action-header { font-size: 13px; font-weight: 800; color: #1c4a30; }
-        .cat-row { display: flex; align-items: center; margin-bottom: 6px; font-size: 10px; }
-        .cat-label { width: 65px; font-weight: 700; color: var(--text-light); }
+        .action-header { font-size: 13px; font-weight: 800; color: #1c4a30; display: flex; align-items: center; gap: 8px; margin-bottom: 4px;}
+        .action-sub { font-size: 12px; color: #3a6a50; display: flex; gap: 6px;}
+        
+        .impact-badge { font-size: 9px; padding: 2px 6px; border-radius: 4px; font-weight: 900; }
+        .badge-high { background: var(--jucai-alert); color: white; }
+        .badge-med { background: var(--jucai-warn); color: white; }
+        .badge-low { background: #A0A0A5; color: white; }
+
+        .cat-row { display: flex; align-items: center; margin-bottom: 8px; font-size: 10px; }
+        .cat-label { width: 80px; font-weight: 700; color: var(--text-light); }
         .cat-bar-bg { flex-grow: 1; height: 8px; background: #E5E5EA; border-radius: 4px; overflow: hidden; }
-        .cat-bar-fill { height: 100%; background: var(--jucai-purple); }
-        .trend-line-container { height: 40px; display: flex; align-items: flex-end; gap: 3px; }
-        .trend-bar { flex: 1; background: var(--jucai-purple); opacity: 0.5; }
+        .cat-bar-fill { height: 100%; transition: width 0.5s ease; }
     </style>
 </head>
 <body>
@@ -54,33 +75,133 @@
                 <p>Decision Engine &bull; April 9, 2026</p>
             </div>
             <div class="top-metrics">
-                <div class="metric-item"><div class="metric-label">Convs</div><div class="metric-value">262</div></div>
-                <div class="metric-item"><div class="metric-label">Pain Points</div><div class="metric-value">144</div></div>
-                <div class="metric-item"><div class="metric-label">Unanswered</div><div class="metric-value danger">45%</div></div>
-                <div class="metric-item"><div class="metric-label">Critical</div><div class="metric-value danger" style="font-size:1.5rem">JUC-004</div></div>
+                <div class="metric-item">
+                    <div class="metric-label">Conversations</div>
+                    <div class="metric-value">262</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label">Pain Points</div>
+                    <div class="metric-value">144 <span class="metric-trend trend-down">0%</span></div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label">Unanswered Rate</div>
+                    <div class="metric-value danger">45% <span class="metric-trend trend-down">0%</span></div>
+                </div>
+                <div class="metric-item" style="background: #FFF5F5; border: 1px solid #FFE0E0;">
+                    <div class="metric-label" style="color: var(--jucai-alert);">Highest Risk Product</div>
+                    <div class="metric-value danger" style="font-size:1.5rem">JUC-003</div>
+                </div>
             </div>
         </div>
         <div class="dashboard-grid">
             <div class="grid-col">
                 <h2 class="section-title">🔥 Biggest Issues</h2>
-                <div class="fire-block"><div class="fire-item"><div class="fire-item-title">1. JUC-004</div><div class="fire-bullet"><span style="color:var(--jucai-alert); font-weight:800;">→</span> 61 complaints (Overwhelming negative feedback on taste, texture, and perceived product quality issues ('bad batch').)</div><div class="fire-bullet"><span style="color:var(--jucai-alert); font-weight:800;">→</span> 15% unanswered rate</div></div><div class="fire-item"><div class="fire-item-title">2. JUC-003</div><div class="fire-bullet"><span style="color:var(--jucai-alert); font-weight:800;">→</span> 39 complaints (Lack of specific, quantifiable nutritional details and vague health claims.)</div><div class="fire-bullet"><span style="color:var(--jucai-alert); font-weight:800;">→</span> 69% unanswered rate</div></div><div class="fire-item"><div class="fire-item-title">3. JUC-001</div><div class="fire-bullet"><span style="color:var(--jucai-alert); font-weight:800;">→</span> 32 complaints (Fundamental confusion about product identity and how to use it.)</div><div class="fire-bullet"><span style="color:var(--jucai-alert); font-weight:800;">→</span> 50% unanswered rate</div></div></div>
+                <div class="fire-block">
+        <div class="fire-item">
+            <div class="fire-item-title">1. JUC-004</div>
+            <div class="fire-bullet">
+                <span style="color:var(--jucai-alert); font-weight:800;">→</span> 
+                61 complaints <span style="color:var(--jucai-alert); font-weight:700;">(+0%)</span> 
+                &mdash; Overwhelming negative feedback on taste, texture, and perceived product quality issues ('bad batch').
+            </div>
+            <div class="fire-bullet">
+                <span style="color:var(--jucai-alert); font-weight:800;">→</span> 
+                15% unanswered rate
+            </div>
+        </div>
+        <div class="fire-item">
+            <div class="fire-item-title">2. JUC-003</div>
+            <div class="fire-bullet">
+                <span style="color:var(--jucai-alert); font-weight:800;">→</span> 
+                39 complaints <span style="color:var(--jucai-alert); font-weight:700;">(+0%)</span> 
+                &mdash; Lack of specific, quantifiable nutritional details and vague health claims.
+            </div>
+            <div class="fire-bullet">
+                <span style="color:var(--jucai-alert); font-weight:800;">→</span> 
+                69% unanswered rate
+            </div>
+        </div>
+        <div class="fire-item">
+            <div class="fire-item-title">3. JUC-001</div>
+            <div class="fire-bullet">
+                <span style="color:var(--jucai-alert); font-weight:800;">→</span> 
+                32 complaints <span style="color:var(--jucai-alert); font-weight:700;">(+0%)</span> 
+                &mdash; Fundamental confusion about product identity and how to use it.
+            </div>
+            <div class="fire-bullet">
+                <span style="color:var(--jucai-alert); font-weight:800;">→</span> 
+                50% unanswered rate
+            </div>
+        </div></div>
                 <h2 class="section-title" style="margin-top:1.5rem">❗ Unanswered</h2>
                 <div class="card ua-card"><ul class="ua-list"></ul></div>
             </div>
             <div class="grid-col">
                 <h2 class="section-title">📊 Pain Points by Product</h2>
-                <div class="card"><table class="data-table"><thead><tr><th>Product</th><th>Pain</th><th>Missed %</th><th>Issue</th></tr></thead><tbody><tr><td style="font-weight: 800; color: var(--jucai-purple);">JUC-001</td><td style="color: var(--jucai-alert); font-weight: 800;">32</td><td>50%</td><td style="color: var(--text-light); font-size: 12px;">Fundamental confusion about product identity and how to use it.</td></tr><tr><td style="font-weight: 800; color: var(--jucai-purple);">JUC-002</td><td style="color: var(--jucai-alert); font-weight: 800;">12</td><td>59%</td><td style="color: var(--text-light); font-size: 12px;">Perceived high price and questions about value for money.</td></tr><tr><td style="font-weight: 800; color: var(--jucai-purple);">JUC-003</td><td style="color: var(--jucai-alert); font-weight: 800;">39</td><td>69%</td><td style="color: var(--text-light); font-size: 12px;">Lack of specific, quantifiable nutritional details and vague health claims.</td></tr><tr><td style="font-weight: 800; color: var(--jucai-purple);">JUC-004</td><td style="color: var(--jucai-alert); font-weight: 800;">61</td><td>15%</td><td style="color: var(--text-light); font-size: 12px;">Overwhelming negative feedback on taste, texture, and perceived product quality issues ('bad batch').</td></tr></tbody></table></div>
+                <div class="card"><table class="data-table"><thead><tr><th>Product</th><th>Pain</th><th>Missed %</th><th>Issue</th></tr></thead><tbody>
+        <tr>
+            <td style="font-weight: 800; color: var(--jucai-purple);">JUC-001</td>
+            <td style="color: var(--jucai-alert); font-weight: 800;">32</td>
+            <td>50%</td>
+            <td style="color: var(--text-light); font-size: 12px;">Fundamental confusion about product identity and how to use it.</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 800; color: var(--jucai-purple);">JUC-002</td>
+            <td style="color: var(--jucai-alert); font-weight: 800;">12</td>
+            <td>59%</td>
+            <td style="color: var(--text-light); font-size: 12px;">Perceived high price and questions about value for money.</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 800; color: var(--jucai-purple);">JUC-003</td>
+            <td style="color: var(--jucai-alert); font-weight: 800;">39</td>
+            <td>69%</td>
+            <td style="color: var(--text-light); font-size: 12px;">Lack of specific, quantifiable nutritional details and vague health claims.</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 800; color: var(--jucai-purple);">JUC-004</td>
+            <td style="color: var(--jucai-alert); font-weight: 800;">61</td>
+            <td>15%</td>
+            <td style="color: var(--text-light); font-size: 12px;">Overwhelming negative feedback on taste, texture, and perceived product quality issues ('bad batch').</td>
+        </tr></tbody></table></div>
+                
                 <h2 class="section-title">💬 Customer Voice</h2>
-                <div class="quotes-grid"></div>
+                <div class="quotes-grid">
+                    <div style="font-size:10px; font-weight:800; color:var(--jucai-alert); text-transform:uppercase;">Pain Quotes</div>
+                    
+                    <div style="font-size:10px; font-weight:800; color:var(--jucai-purple); text-transform:uppercase; margin-top:8px;">Confusion Quotes</div>
+                    
+                </div>
             </div>
             <div class="grid-col">
-                <h2 class="section-title">✅ Next Actions</h2>
-                <div style="margin-bottom:1.5rem"><div class="action-card"><div class="action-header">1. Launch an immediate, high-priority investigation into JUC-004's taste, texture, and 'bad batch' complaints, including QA review and potential product recall assessment.</div><div class="action-sub"><span>→</span> 61 pain points and 62 complaints indicate a critical product quality issue severely impacting customer trust, retention, and brand reputation. This is the most urgent risk.</div></div><div class="action-card"><div class="action-header">2. Develop and deploy clear, concise product positioning and usage guides for JUC-001, integrating them into AI responses and marketing materials.</div><div class="action-sub"><span>→</span> High pre-purchase confusion (49 pre-purchase conversations, 36 unanswered) for JUC-001 is a significant barrier to conversion. Clarifying product identity will reduce friction and improve sales.</div></div><div class="action-card"><div class="action-header">3. Publish comprehensive and precise nutritional information (e.g., exact grams of sugar, calories per serving) for JUC-003, and update AI knowledge base accordingly.</div><div class="action-sub"><span>→</span> Customers for JUC-003 are highly skeptical due to vague health claims and lack of specific data (39 pain points, 52 unanswered). Transparency will build trust and aid conversion for health-conscious buyers.</div></div></div>
+                <h2 class="section-title">✅ Prioritized Actions</h2>
+                <div style="margin-bottom:1.5rem">
+        <div class="action-card">
+            <div class="action-header">
+                <span class="impact-badge badge-med">MED IMPACT</span> 1. Launch an immediate, high-priority investigation into JUC-004's taste, texture, and 'bad batch' complaints, including QA review and potential product recall assessment.
+            </div>
+            <div class="action-sub"><span>→</span> 61 pain points and 62 complaints indicate a critical product quality issue severely impacting customer trust, retention, and brand reputation. This is the most urgent risk.</div>
+        </div>
+        <div class="action-card">
+            <div class="action-header">
+                <span class="impact-badge badge-med">MED IMPACT</span> 2. Develop and deploy clear, concise product positioning and usage guides for JUC-001, integrating them into AI responses and marketing materials.
+            </div>
+            <div class="action-sub"><span>→</span> High pre-purchase confusion (49 pre-purchase conversations, 36 unanswered) for JUC-001 is a significant barrier to conversion. Clarifying product identity will reduce friction and improve sales.</div>
+        </div>
+        <div class="action-card">
+            <div class="action-header">
+                <span class="impact-badge badge-med">MED IMPACT</span> 3. Publish comprehensive and precise nutritional information (e.g., exact grams of sugar, calories per serving) for JUC-003, and update AI knowledge base accordingly.
+            </div>
+            <div class="action-sub"><span>→</span> Customers for JUC-003 are highly skeptical due to vague health claims and lack of specific data (39 pain points, 52 unanswered). Transparency will build trust and aid conversion for health-conscious buyers.</div>
+        </div></div>
                 <div class="card">
-                    <h3 style="font-size:10px; color:var(--text-light); margin-bottom:8px;">🔵 Categories</h3>
-                    <div class="cat-row"><div class="cat-label">Complaint</div><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:85%; background:var(--jucai-alert)"></div></div></div>
-                    <div class="cat-row"><div class="cat-label">Pricing</div><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:60%"></div></div></div>
-                    <div class="cat-row"><div class="cat-label">Usage</div><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:40%"></div></div></div>
+                    <h3 style="font-size:10px; color:var(--text-light); margin-bottom:12px; text-transform:uppercase;">🔵 Category Distribution</h3>
+                    
+        <div class="cat-row">
+            <div class="cat-label">No Data</div>
+            <div class="cat-bar-bg">
+                <div class="cat-bar-fill" style="width:100%; background:var(--jucai-alert)"></div>
+            </div>
+        </div>
                 </div>
             </div>
         </div>
