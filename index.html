@@ -26,9 +26,10 @@
   .wrap { max-width:1400px; margin:0 auto; padding:2.5rem 2rem; }
   .card {
     background:#161B24;
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
     border-radius:18px;
     padding:1.5rem 1.75rem;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03);
   }
   .section-label {
     font-size:11px;
@@ -106,7 +107,8 @@
       </div>
       <div class="score-cards" style="display:flex;gap:0.75rem;flex:1;justify-content:flex-end;flex-wrap:wrap;min-width:0">
         
-    <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.25rem 1.5rem;flex:1;min-width:140px;border-top:3px solid #F0F2F8">
+    <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:1.25rem 1.5rem;flex:1;min-width:140px;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03)">
+      <div style="position:absolute;top:14px;right:14px;width:6px;height:6px;border-radius:2px;background:#F0F2F8;opacity:0.7"></div>
       <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#8892A8;margin-bottom:10px">Total Scans</div>
       <div style="font-size:2rem;font-weight:800;color:#F0F2F8;line-height:1;letter-spacing:-0.02em">
         61
@@ -114,7 +116,8 @@
       
     </div>
         
-    <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.25rem 1.5rem;flex:1;min-width:140px;border-top:3px solid #FF6B6B">
+    <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:1.25rem 1.5rem;flex:1;min-width:140px;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03)">
+      <div style="position:absolute;top:14px;right:14px;width:6px;height:6px;border-radius:2px;background:#FF6B6B;opacity:0.7"></div>
       <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#8892A8;margin-bottom:10px">High Impact Actions</div>
       <div style="font-size:2rem;font-weight:800;color:#FF6B6B;line-height:1;letter-spacing:-0.02em">
         2
@@ -122,7 +125,8 @@
       
     </div>
         
-    <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.25rem 1.5rem;flex:1;min-width:140px;border-top:3px solid #00D4B4">
+    <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:1.25rem 1.5rem;flex:1;min-width:140px;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03)">
+      <div style="position:absolute;top:14px;right:14px;width:6px;height:6px;border-radius:2px;background:#00D4B4;opacity:0.7"></div>
       <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#8892A8;margin-bottom:10px">Active Sentiment</div>
       <div style="font-size:2rem;font-weight:800;color:#00D4B4;line-height:1;letter-spacing:-0.02em">
         45<span style="font-size:14px;color:#8892A8;margin-left:3px;font-weight:500">%</span>
@@ -130,7 +134,8 @@
       
     </div>
         
-    <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.25rem 1.5rem;flex:1;min-width:140px;border-top:3px solid #F5A623">
+    <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:1.25rem 1.5rem;flex:1;min-width:140px;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03)">
+      <div style="position:absolute;top:14px;right:14px;width:6px;height:6px;border-radius:2px;background:#F5A623;opacity:0.7"></div>
       <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#8892A8;margin-bottom:10px">AI Unanswered</div>
       <div style="font-size:2rem;font-weight:800;color:#F5A623;line-height:1;letter-spacing:-0.02em">
         45<span style="font-size:14px;color:#8892A8;margin-left:3px;font-weight:500">%</span>
@@ -142,7 +147,7 @@
 
     <!-- ROW 2: BIGGEST CHANGE -->
     
-    <div class="section-gap" style="background:#161B24;border:1px solid rgba(0,212,180,0.18);border-left:4px solid #00D4B4;border-radius:16px;padding:1.5rem 1.75rem">
+    <div class="section-gap" style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:1.5rem 1.75rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03)">
       <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:14px">
         <div style="font-size:18px;line-height:1;flex-shrink:0;margin-top:2px">⚡</div>
         <div>
@@ -161,32 +166,36 @@
       <span class="section-label">Prioritized Actions</span>
       <div class="action-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0.85rem">
         
-      <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:1.25rem 1.4rem;border-left:3px solid #FF6B6B;opacity:0;animation:fadeSlideIn 0.4s ease forwards;animation-delay:0s">
-        <div style="font-weight:700;font-size:13.5px;margin-bottom:7px;color:#F0F2F8;line-height:1.5">Conduct an immediate, in-depth investigation into JUC-004's taste and texture issues, including batch testing, supplier review, and potential reformulation.</div>
+      <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.25rem 1.4rem;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03);opacity:0;animation:fadeSlideIn 0.4s ease forwards;animation-delay:0s">
+        <div style="position:absolute;top:14px;right:14px;width:7px;height:7px;border-radius:50%;background:#FF6B6B"></div>
+        <div style="font-weight:700;font-size:13.5px;margin-bottom:7px;color:#F0F2F8;line-height:1.5;padding-right:20px">Conduct an immediate, in-depth investigation into JUC-004's taste and texture issues, including batch testing, supplier review, and potential reformulation.</div>
         <div style="font-size:12.5px;color:#C0C6D8;line-height:1.65;margin-bottom:12px">This product has the highest negative sentiment and direct quality complaints, posing an immediate threat to brand reputation and customer retention.</div>
         <div style="display:flex;align-items:center;gap:6px">
           <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 10px;border-radius:6px;background:rgba(255,107,107,0.12);color:#FF6B6B">high</span>
           <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:6px;background:rgba(245,166,35,0.1);color:#F5A623">product</span>
         </div>
       </div>
-      <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:1.25rem 1.4rem;border-left:3px solid #FF6B6B;opacity:0;animation:fadeSlideIn 0.4s ease forwards;animation-delay:0.06s">
-        <div style="font-weight:700;font-size:13.5px;margin-bottom:7px;color:#F0F2F8;line-height:1.5">Develop comprehensive FAQ content and AI training modules for JUC-001 and JUC-003 to clarify product usage, benefits, nutritional information, and serving suggestions.</div>
+      <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.25rem 1.4rem;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03);opacity:0;animation:fadeSlideIn 0.4s ease forwards;animation-delay:0.06s">
+        <div style="position:absolute;top:14px;right:14px;width:7px;height:7px;border-radius:50%;background:#FF6B6B"></div>
+        <div style="font-weight:700;font-size:13.5px;margin-bottom:7px;color:#F0F2F8;line-height:1.5;padding-right:20px">Develop comprehensive FAQ content and AI training modules for JUC-001 and JUC-003 to clarify product usage, benefits, nutritional information, and serving suggestions.</div>
         <div style="font-size:12.5px;color:#C0C6D8;line-height:1.65;margin-bottom:12px">High unanswered rates and vague product understanding are hindering customer adoption and satisfaction for these products.</div>
         <div style="display:flex;align-items:center;gap:6px">
           <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 10px;border-radius:6px;background:rgba(255,107,107,0.12);color:#FF6B6B">high</span>
           <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:6px;background:rgba(0,212,180,0.1);color:#00D4B4">content</span>
         </div>
       </div>
-      <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:1.25rem 1.4rem;border-left:3px solid #F5A623;opacity:0;animation:fadeSlideIn 0.4s ease forwards;animation-delay:0.12s">
-        <div style="font-weight:700;font-size:13.5px;margin-bottom:7px;color:#F0F2F8;line-height:1.5">Review JUC-002's pricing strategy and explore value-add options or clearer communication of its unique benefits to justify the current price point and address objections.</div>
+      <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.25rem 1.4rem;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03);opacity:0;animation:fadeSlideIn 0.4s ease forwards;animation-delay:0.12s">
+        <div style="position:absolute;top:14px;right:14px;width:7px;height:7px;border-radius:50%;background:#F5A623"></div>
+        <div style="font-weight:700;font-size:13.5px;margin-bottom:7px;color:#F0F2F8;line-height:1.5;padding-right:20px">Review JUC-002's pricing strategy and explore value-add options or clearer communication of its unique benefits to justify the current price point and address objections.</div>
         <div style="font-size:12.5px;color:#C0C6D8;line-height:1.65;margin-bottom:12px">Significant pricing objections are impacting purchase intent and post-purchase satisfaction for JUC-002.</div>
         <div style="display:flex;align-items:center;gap:6px">
           <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 10px;border-radius:6px;background:rgba(245,166,35,0.12);color:#F5A623">medium</span>
           <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:6px;background:rgba(244,114,182,0.1);color:#F472B6">marketing</span>
         </div>
       </div>
-      <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:1.25rem 1.4rem;border-left:3px solid #F5A623;opacity:0;animation:fadeSlideIn 0.4s ease forwards;animation-delay:0.18s">
-        <div style="font-weight:700;font-size:13.5px;margin-bottom:7px;color:#F0F2F8;line-height:1.5">Implement a continuous feedback loop for AI unanswered questions across all products to identify knowledge gaps and improve resolution rates systematically.</div>
+      <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.25rem 1.4rem;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03);opacity:0;animation:fadeSlideIn 0.4s ease forwards;animation-delay:0.18s">
+        <div style="position:absolute;top:14px;right:14px;width:7px;height:7px;border-radius:50%;background:#F5A623"></div>
+        <div style="font-weight:700;font-size:13.5px;margin-bottom:7px;color:#F0F2F8;line-height:1.5;padding-right:20px">Implement a continuous feedback loop for AI unanswered questions across all products to identify knowledge gaps and improve resolution rates systematically.</div>
         <div style="font-size:12.5px;color:#C0C6D8;line-height:1.65;margin-bottom:12px">A high overall AI unanswered rate indicates a systemic issue that can be improved with ongoing optimization, reducing customer frustration.</div>
         <div style="display:flex;align-items:center;gap:6px">
           <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 10px;border-radius:6px;background:rgba(245,166,35,0.12);color:#F5A623">medium</span>
@@ -198,7 +207,7 @@
 
     <!-- ROW 4: SENTIMENT | FASTEST GROWING | NEEDS ATTENTION -->
     <div class="row-3col section-gap" style="display:flex;gap:1rem;align-items:stretch">
-      <div class="card" style="flex:1;min-width:180px">
+      <div class="card" style="flex:1;min-width:180px;position:relative">
         <span class="section-label">Sentiment Breakdown</span>
         
     <div style="margin-bottom:18px">
@@ -234,7 +243,7 @@
           262 total messages
         </div>
       </div>
-      <div class="card" style="flex:1;min-width:180px;border-top:3px solid #00D4B4">
+      <div class="card" style="flex:1;min-width:180px">
         <span class="section-label">Fastest Growing</span>
         
     <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;opacity:0;animation:fadeSlideIn 0.35s ease forwards;animation-delay:0s">
@@ -252,7 +261,7 @@
       </div>
     </div>
       </div>
-      <div class="card" style="flex:1;min-width:180px;border-top:3px solid #FF6B6B">
+      <div class="card" style="flex:1;min-width:180px">
         <span class="section-label">Needs Attention</span>
         
     <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;opacity:0;animation:fadeSlideIn 0.35s ease forwards;animation-delay:0s">
@@ -281,7 +290,7 @@
 
     <!-- ROW 5: RISKS | OPPORTUNITIES -->
     <div class="row-2col section-gap" style="display:flex;gap:1rem;align-items:stretch">
-      <div class="card" style="flex:1;border-top:3px solid #FF6B6B">
+      <div class="card" style="flex:1">
         <span class="section-label">Risks</span>
         
     <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;opacity:0;animation:fadeSlideIn 0.35s ease forwards;animation-delay:0s">
@@ -301,7 +310,7 @@
       <span style="font-size:13px;font-weight:400;color:#C0C6D8;line-height:1.65">Lost sales opportunities due to unclear product value propositions and benefits.</span>
     </div>
       </div>
-      <div class="card" style="flex:1;border-top:3px solid #00D4B4">
+      <div class="card" style="flex:1">
         <span class="section-label">Opportunities</span>
         
     <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;opacity:0;animation:fadeSlideIn 0.35s ease forwards;animation-delay:0s">
@@ -507,13 +516,14 @@
     <div id="product-cards-container">
       
       <div class="product-detail-card" data-product-idx="0" style="display:none;opacity:0;animation:fadeSlideIn 0.4s ease forwards">
-        <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:1.75rem 2rem;border-top:3px solid #FF6B6B">
+        <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:1.75rem 2rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03)">
 
           <!-- Header -->
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:8px">
             <div>
-              <div style="font-weight:800;font-size:19px;letter-spacing:0.01em;color:#F0F2F8;margin-bottom:10px">
-                <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#FF6B6B;margin-right:10px;vertical-align:middle"></span>JUC-001
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+                <span style="font-weight:800;font-size:19px;letter-spacing:0.01em;color:#F0F2F8">JUC-001</span>
+                <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 10px;border-radius:20px;background:rgba(255,107,107,0.1);color:#FF6B6B">critical</span>
               </div>
               <div style="display:flex;gap:1.5rem;font-size:12.5px;color:#8892A8;flex-wrap:wrap">
                 <span>Scans <strong style="color:#00D4B4;font-weight:800">20</strong></span>
@@ -600,13 +610,14 @@
         </div>
       </div>
       <div class="product-detail-card" data-product-idx="1" style="display:none;opacity:0;animation:fadeSlideIn 0.4s ease forwards">
-        <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:1.75rem 2rem;border-top:3px solid #FF6B6B">
+        <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:1.75rem 2rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03)">
 
           <!-- Header -->
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:8px">
             <div>
-              <div style="font-weight:800;font-size:19px;letter-spacing:0.01em;color:#F0F2F8;margin-bottom:10px">
-                <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#FF6B6B;margin-right:10px;vertical-align:middle"></span>JUC-002
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+                <span style="font-weight:800;font-size:19px;letter-spacing:0.01em;color:#F0F2F8">JUC-002</span>
+                <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 10px;border-radius:20px;background:rgba(255,107,107,0.1);color:#FF6B6B">critical</span>
               </div>
               <div style="display:flex;gap:1.5rem;font-size:12.5px;color:#8892A8;flex-wrap:wrap">
                 <span>Scans <strong style="color:#00D4B4;font-weight:800">8</strong></span>
@@ -693,13 +704,14 @@
         </div>
       </div>
       <div class="product-detail-card" data-product-idx="2" style="display:none;opacity:0;animation:fadeSlideIn 0.4s ease forwards">
-        <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:1.75rem 2rem;border-top:3px solid #FF6B6B">
+        <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:1.75rem 2rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03)">
 
           <!-- Header -->
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:8px">
             <div>
-              <div style="font-weight:800;font-size:19px;letter-spacing:0.01em;color:#F0F2F8;margin-bottom:10px">
-                <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#FF6B6B;margin-right:10px;vertical-align:middle"></span>JUC-003
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+                <span style="font-weight:800;font-size:19px;letter-spacing:0.01em;color:#F0F2F8">JUC-003</span>
+                <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 10px;border-radius:20px;background:rgba(255,107,107,0.1);color:#FF6B6B">critical</span>
               </div>
               <div style="display:flex;gap:1.5rem;font-size:12.5px;color:#8892A8;flex-wrap:wrap">
                 <span>Scans <strong style="color:#00D4B4;font-weight:800">16</strong></span>
@@ -786,13 +798,14 @@
         </div>
       </div>
       <div class="product-detail-card" data-product-idx="3" style="display:none;opacity:0;animation:fadeSlideIn 0.4s ease forwards">
-        <div style="background:#161B24;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:1.75rem 2rem;border-top:3px solid #FF6B6B">
+        <div style="background:#161B24;border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:1.75rem 2rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.03)">
 
           <!-- Header -->
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:8px">
             <div>
-              <div style="font-weight:800;font-size:19px;letter-spacing:0.01em;color:#F0F2F8;margin-bottom:10px">
-                <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#FF6B6B;margin-right:10px;vertical-align:middle"></span>JUC-004
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+                <span style="font-weight:800;font-size:19px;letter-spacing:0.01em;color:#F0F2F8">JUC-004</span>
+                <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 10px;border-radius:20px;background:rgba(255,107,107,0.1);color:#FF6B6B">critical</span>
               </div>
               <div style="display:flex;gap:1.5rem;font-size:12.5px;color:#8892A8;flex-wrap:wrap">
                 <span>Scans <strong style="color:#00D4B4;font-weight:800">17</strong></span>
